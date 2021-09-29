@@ -16,7 +16,19 @@ console.log("Hello! Your BMI value is " + bmi);
 const readline = require('readline-sync');
 weight = readline.question('請輸入您的體重(kg)?');
 height = readline.question('請輸入您的身高(cm)?');
-
+weight = Number(weight)
+height = Number(height)
+//判斷數值是否合理
+if (isNaN(weight) || weight <= 0 || weight > 637) {
+    console.log("您輸入的資料有誤! 請輸入介於1~630之間的數字")
+}
+else if (isNaN(height) || height <= 0 || height > 220) {
+    console.log("您輸入的資料有誤! 請輸入介於1~220之間的數字")
+} else {
+    //計算BMI
+    var bmi = weight / ((height / 100) ** 2);
+    console.log("Hello! Your BMI value is " + bmi);
+}
 
 //not only bmi value, but also judgement
 //Ask user to input height only, is it workable?
