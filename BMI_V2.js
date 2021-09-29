@@ -5,7 +5,8 @@
 const readline = require('readline-sync');
 height = readline.question('請輸入您的身高(cm)?');
 height = Number(height)
-//判斷數值是否合理
+//判斷數值是否不合理
+//if (!isNaN(height) && height>0 && height<=220)
 if (isNaN(height) || height <= 0 || height > 220) {
     console.log("您輸入的資料有誤! 請輸入介於1~220之間的數字")
 } else {
