@@ -20,7 +20,24 @@ while(true){ //無窮迴圈
     }else{
      //移動電梯至欲達樓層
      //currentFloor 移到 targetFloor
-     console.log("to be continue...")
+     if(targetFloor<currentFloor){ //down
+        console.log("電梯往下...");
+        while(targetFloor < currentFloor){
+            currentFloor = currentFloor - 1;
+            // currentFloor -= 1;
+            // currentFloor--;
+            console.log("電梯在"+currentFloor+"樓");
+        }
+        
+     }else{//up
+        console.log("電梯往上...");
+        while(targetFloor > currentFloor){
+            currentFloor = currentFloor + 1;
+            // currentFloor += 1;
+            // currentFloor++;
+            console.log("電梯在"+currentFloor+"樓");
+        }
+     }
     }
 }
 
