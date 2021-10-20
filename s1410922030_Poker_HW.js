@@ -72,6 +72,6 @@ console.log("Player4:" + player4 );
 player4.sort(compare1);
 player4.sort(compare2);
 console.log("排序後: " + player4.sort(compare3));
-
+//
 
 
